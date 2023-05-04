@@ -64,6 +64,11 @@
     });
     });
 
+//DELETE route for deleting notes
+    // app.delete('/api/notes/:id', (req, res) => {
+    // fs.readFile(path.join(__dirname, 'db', 'db.json'), 'utf8', (err, data) => {
+    //     if (err) {
+
 //Start the server
     app.listen(PORT, () =>
     console.log(`App listening at http://localhost:${PORT} 🚀`)
