@@ -19,30 +19,41 @@ app.get('/notes', (req, res) =>
 );
 
 app.get('/api/notes', (req, res) => {
-    fs.readFile('db.json', 'utf-8', (err, data) => {
-        if (err) throw err;
+    fs.readFile(path.join(__dirname, 'db', 'db.json'), 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Failed to read notes from the file.' });
+      } else {
         res.json(JSON.parse(data));
+      }
     });
-});
+  });
+  
 
-
-
-
-app.post('/api/notes', (req, res) => { 
-    fs.readFile('db.json', 'utf-8', (err, data) => {
-        if (err) throw err;
+  app.post('/api/notes', (req, res) => {
+    fs.readFile(path.join(__dirname, 'db', 'db.json'), 'utf8', (err, data) => {
+      if (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Failed to read notes from the file.' });
+      } else {
         const notes = JSON.parse(data);
         const newNote = req.body;
-        newNote.id = Date.now();
+        newNote.id = Date.now(); // Assign a unique ID to the new note
         notes.push(newNote);
-
-        fs.writeFile('db.json', JSON.stringify(notes), (err) => {
-            if (err) throw err;
-            console.log(err);
+  
+        fs.writeFile(path.join(__dirname, 'db', 'db.json'), JSON.stringify(notes), (err) => {
+          if (err) {
+            console.error(err);
+            res.status(500).json({ error: 'Failed to save the new note.' });
+          } else {
             res.json(newNote);
+          }
         });
+      }
     });
-});
+  });
+  
+  
 
 
 
