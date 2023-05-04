@@ -1,49 +1,36 @@
+![Alt text](https://github.com/Adam-Riet/Note-Taker/blob/main/Develop/Assets/Images/Screenshot%202023-05-04%20at%201.13.24%20PM.png)
 
-
-# Logo.svg Generator
+# Note Taker.express
 
 ## Description
-This command-line application is a Logo.svg generator that helps users create a custom logo with a selected shape, color, and text. The application prompts the user for their desired shape, color, and text using an intuitive interface, and generates a well-structured SVG logo. By using this generator, users can easily create personalized logos for their projects or businesses.
-
-## Table of Contents
-- [Installation](#installation)
-- [Demo](#demo)
-- [Usage](#usage)
-- [Credits](#credits)
+The Note Taker is a web application designed to help users create, view, and manage notes efficiently. Built with Express.js, the app provides a simple and intuitive interface that allows users to quickly add new notes, view existing ones, and delete notes when they are no longer needed. By utilizing the power of Express.js, the Note Taker offers a lightweight, fast, and responsive solution for note management. Whether you need to jot down important information, track to-do items, or simply collect your thoughts, the Note Taker is a versatile and convenient tool to help you stay organized and focused.
 
 ## Installation
-1. Clone the repository to your local machine. You can use either the SSH or HTTPS URL:
+There is no installation required for this app. 
 
-SSH: git@github.com:Adam-Riet/Logo.gen.git
-HTTPS: git clone https://github.com/Adam-Riet/Logo.gen.git
-
-2. Navigate to the project directory by running cd Logo.svg-Generator.
-3. Install Node.js on your machine if you haven't already. You can download it from the official website: https://nodejs.org/.
-4. Install the necessary dependencies by running npm install in your terminal. This command will install the required packages listed in the package.json file, such as Inquirer and Jest.
-5. Once the installation is complete, you can use the application by running node index.js in your terminal. This command will start the application and prompt you for the required information.
-
-## Demo
-Check out this video on how to run the code once you have complete the instrucitons:
-
-[Click here to watch the demo video](https://drive.google.com/file/d/1aS0u_gGLw-OiYget2R9zV_tiwCNdCiAh/view?usp=sharing)
+See usage for Heroku link for deployed app. 
 
 ## Usage
-1. Open a terminal or command prompt.
-2. Navigate to the project directory.
-3. Run node index.js.
-4. Answer the prompts to provide information about your desired logo, such as the shape, color, text, and text color.
-5. After answering all the prompts, a logo.svg file will be generated in the project directory, containing the custom logo you designed.
+1. Access the Note Taker app by visiting the deployed URL on Heroku (e.g. https://your-app-name.herokuapp.com).
+2. Click on the "Get Started" button on the landing page to navigate to the notes page.
+3. To create a new note, click on the "New Note" button in the top right corner.
+4. Enter a title and content for your note in the respective fields.
+5. As you type, the "Save" button will become visible. Click on it to save the note.
+6. Your saved notes will be displayed in the left sidebar. To view a saved note, click on its title in the sidebar.
+7. To delete a note, click on the trash icon next to the note title in the sidebar.
 
 ## Credits
 
-* This Logo.svg Generator wouldn't be possible without the following resources and tools:
+* Express.js: Fast, unopinionated, minimalist web framework for Node.js, used for handling server-side logic.
 
 * Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine, enabling the creation of scalable and efficient applications.
-
-* Inquirer: A powerful command-line interface (CLI) library for Node.js that allows users to interact with the application and provide input in an intuitive manner.
-npm (Node Package Manager): The world's largest software registry, providing access to countless packages, tools, and libraries that greatly simplify the development process.
 
 * File System (fs): A built-in Node.js module that enables interaction with the file system, allowing for the reading and writing of files.
 package.json: A crucial file in any Node.js project that contains metadata about the project, such as its name, version, dependencies, and scripts.
 
-* Jest: A delightful JavaScript testing framework maintained by Facebook, Inc. with a focus on simplicity and support for large web applications. Jest provides a platform for writing and running tests, making it easy to ensure the reliability and correctness of your code.
+* uuid: A library to create universally unique identifiers, used for generating unique IDs for notes.
+
+Special thanks to the developers and maintainers of these modules and libraries for their invaluable contributions to the open-source community.
+
+## License
+MIT https://opensource.org/licenses/MIT
