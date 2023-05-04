@@ -2,6 +2,7 @@
     const express = require('express');
     const path = require('path');
     const fs = require('fs');
+    const { v4: uuidv4 } = require('uuid');
 
 //Set up the default port or use the port from the environment variable
     const PORT = process.env.PORT || 3001;
@@ -49,7 +50,7 @@
       } else {
         const notes = JSON.parse(data);
         const newNote = req.body;
-        newNote.id = Date.now(); // Assign a unique ID to the new note
+        newNote.id = uuidv4();
         notes.push(newNote);
   
         fs.writeFile(path.join(__dirname, 'db', 'db.json'), JSON.stringify(notes), (err) => {
