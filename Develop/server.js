@@ -66,9 +66,17 @@
     });
 
 //DELETE route for deleting notes
-    // app.delete('/api/notes/:id', (req, res) => {
-    // fs.readFile(path.join(__dirname, 'db', 'db.json'), 'utf8', (err, data) => {
-    //     if (err) {
+    app.delete('/api/notes/:id', (req, res) => {
+        fs.readFile(path.join(__dirname, 'db', 'db.json'), 'utf8', (err, data) => {
+            if (err) {
+            console.error(err);
+            res.status(500).json({ error: 'Failed to read notes from the file.' });
+            } else {
+            const notes = JSON.parse(data);
+            const filteredNotes = notes.filter((note) => note.id !== req.params.id);
+            }
+        });
+    });
 
 //Start the server
     app.listen(PORT, () =>
