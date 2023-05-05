@@ -11,7 +11,7 @@ There is no installation required for this app.
 See usage for Heroku link for deployed app. 
 
 ## Usage
-1. Access the Note Taker app by visiting the deployed URL on Heroku (e.g. https://your-app-name.herokuapp.com).
+1. Access the Note Taker app by visiting the deployed URL on Heroku (https://note-taker-express-v1.herokuapp.com/notes).
 2. Click on the "Get Started" button on the landing page to navigate to the notes page.
 3. To create a new note, click on the "New Note" button in the top right corner.
 4. Enter a title and content for your note in the respective fields.
